@@ -16,7 +16,7 @@
     }
 
     .button {
-        background-color: #4CAF50;
+        background-color: pink;
         /* Green */
         border: none;
         color: white;
@@ -59,9 +59,9 @@
         border-radius:5px
     }
 
-    .red {
-        border: 1px solid red;
-        background: red;
+    .pink {
+        border: 1px solid pink;
+        background: pink;
     }
     p{
             margin:auto auto;
@@ -73,7 +73,7 @@
     <div class='bg'></div>
     <div id="app">
         <div class="blockDiv">
-            <div class='block' :class="{ red:changeRed == index}" v-for="(item,index) in items">
+            <div class='block' :class="{ pink:changePink == index}" v-for="(item,index) in items">
               <p> {{ item }}</p>
             </div>
 
@@ -88,17 +88,17 @@
         el: '#app',
         data: {
             items: [
-                '口红',
+                '精华',
                 '么么哒',
-                '口红',
-                '耳环',
-                '护肤水乳',
+                '眼霜',
+                '精华',
+                '眼霜',
                 '重在参与',
                 '么么哒',
-                '护肤水乳',
-                '耳环'
+                '私人订制餐',
+                '精华+眼霜'
             ],
-            changeRed: -1,
+            changePink: -1,
             btntext: "抽奖",
             randoing: null,
             idx: 0,
@@ -138,7 +138,7 @@
 
             },
             change(index) {
-                this.changeRed = index;
+                this.changePink = index;
             }
 
         }
